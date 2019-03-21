@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>table+margin</title>
+  <style>
+    .parent{
+      background-color: aliceblue;
+    }
+    .child {
+      display: table;
+      margin:0 auto;
+      background-color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：先将子框设置为块级表格来显示（类似），再设置子框居中以达到水平居中。
+    用法：对子框设置display:table，再设置margin:0 auto。
+    优点：只设置了child，ie8以上都支持
+    缺点：不支持ie6、ie7,将div换成table
+   -->
+  <div class="parent">
+    <div class="child">
+      DEMO
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>inline-block+text-align</title>
+  <style>
+    .child {
+      display: inline-block;
+      background-color: #ccc;
+    }
+    .parent {
+      text-align:center;
+      background-color: aliceblue;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：先将子框由块级元素改变为行内块元素，再通过设置行内块元素居中以达到水平居中。
+    用法：对子框设置display:inline-block，对父框设置text-align:center。
+    优点：兼容性好，甚至可以兼容ie6、ie7
+    缺点：child里的文字也会水平居中，可以在.child添加text-align:left;还原
+   -->
+  <div class="parent">
+    <div class="child">DEMO</div>
+  </div>
+</body>
+
+</html>

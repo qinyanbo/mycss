@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>table-cell+vertical-align</title>
+  <style>
+    .parent {
+      height: 100px;
+      display: table-cell;
+      vertical-align: middle;
+      background-color: aliceblue;
+    }
+    .child{
+      background-color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：通过将父框转化为一个表格单元格显示（类似 <td> 和 <th>），再通过设置属性，使表格单元格内容垂直居中以达到垂直居中。
+    用法：先将父框设置为display:table-cell，再设置vertical-align:middle。
+    优点：兼容性较好，ie8以上均支持
+    缺点：
+   -->
+  <div class="parent">
+    <div class="child">DEMO</div>
+  </div>
+</body>
+
+</html>

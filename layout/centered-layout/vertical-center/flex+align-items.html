@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex + align-items</title>
+  <style>
+    .parent {
+      display: flex;
+      align-items: center;
+      background-color: aliceblue;
+      height: 200px;
+    }
+    .child{
+      background-color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：通过设置CSS3中的布局利器flex中的属性align-times，使子框垂直居中。
+    用法：先将父框设置为display:flex，再设置align-items:center。
+    优点：只设置parent
+    缺点：兼容性存在一定问题
+   -->
+  <div class="parent">
+    <div class="child">DEMO</div>
+  </div>
+</body>
+
+</html>

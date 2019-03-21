@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex+margin</title>
+  <style>
+    .parent {
+      display: flex;
+      background-color: aliceblue;
+    }
+    .child {
+      margin:0 auto;
+      background-color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：通过CSS3中的布局利器flex将子框转换为flex item，再设置子框居中以达到居中。
+    用法：先将父框设置为display:flex，再设置子框margin:0 auto。
+    优点：
+    缺点：低版本浏览器(ie6 ie7 ie8)不支持
+   -->
+  <div class="parent">
+    <div class="child">
+      DEMO
+    </div>
+  </div>
+</body>
+
+</html>

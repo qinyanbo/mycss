@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>absolute+transform</title>
+  <style>
+    .parent {
+      position: relative;
+      background-color: aliceblue;
+    }
+
+    .child {
+      position: absolute;
+      left:50%;
+      transform: translateX(-50%);
+      background-color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：将子框设置为绝对定位，移动子框，使子框左侧距离相对框左侧边框的距离为相对框宽度的一半，再通过向左移动子框的一半宽度以达到水平居中。当然，在此之前，我们需要设置父框为相对定位，使父框成为子框的相对框。
+    用法：对父框设置position:relative，对子框设置position:absolute，left:50%，transform:translateX(-50%)。
+    优点：居中元素不会对其他的产生影响
+    缺点：transform属于css3内容，兼容性存在一定问题，高版本浏览器需要添加一些前缀
+   -->
+  <div class="parent">
+    <div class="child">DEMO</div>
+  </div>
+</body>
+
+</html>

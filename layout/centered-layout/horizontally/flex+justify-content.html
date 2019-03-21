@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex+justify-content</title>
+  <style>
+    .parent {
+      display: flex;
+      justify-content: center;
+      background-color: aliceblue;
+    }
+    .child{
+      background-color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：通过CSS3中的布局利器flex中的justify-content属性来达到水平居中。
+    用法：先将父框设置为display:flex，再设置justify-content:center。
+    优点：设置parent即可
+    缺点：低版本浏览器(ie6 ie7 ie8)不支持
+   -->
+  <div class="parent">
+    <div class="child">
+      DEMO
+    </div>
+  </div>
+</body>
+
+</html>
