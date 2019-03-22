@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>table</title>
+  <style>
+    .parent {
+      display: table;
+      width:100%;
+      table-layout:fixed;
+    }
+    .left {
+      width:100px;
+      padding-right:20px;
+      background-color: antiquewhite;
+    }
+    .right,
+    .left {
+      display: table-cell;
+    }
+    .right{
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：通过将父框设置为表格，将左右边框转化为类似于同一行的td，从而达到多列布局。
+    用法：先将父框设置为display:table、width:100%、table-layout:fixed，再设置左右框display:table-cell，最后设置左框width、padding-right。
+    优点：
+    缺点：
+   -->
+  <div class="parent">
+    <div class="left">
+      <p>left</p>
+    </div>
+    <div class="right">
+      <p>right</p>
+      <p>right</p>
+      <p>right</p>
+      <p>right</p>
+    </div>
+  </div>
+</body>
+
+</html>

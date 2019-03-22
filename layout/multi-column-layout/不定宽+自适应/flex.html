@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex</title>
+  <style>
+    .parent {
+      display: flex;
+    }
+    .left {
+      margin-right:20px;
+      background-color: aliceblue;
+    }
+    .right {
+      flex:1;
+      background-color: antiquewhite;
+    }
+    .left p {
+      width:200px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：通过设置CSS3布局利器flex中的flex属性以达到多列布局，加上给左框中的内容定宽、给右框设置flex达到不定款+自适应。
+    用法：先将父框设置为display:flex，再设置右框flex:1，最后设置左框margin-right:20px、左框中的内容width。
+    优点：flex很强大
+    缺点：兼容性存在一定问题，性能存在一定问题
+   -->
+  <div class="parent">
+    <div class="left">
+      <p>
+        left
+      </p>
+    </div>
+    <div class="right">
+      <p>
+        right
+      </p>
+      <p>
+        right
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

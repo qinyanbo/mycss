@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>float + overflow</title>
+  <style>
+    .left {
+      float: left;
+      margin-right:20px;
+      background-color: antiquewhite;
+    }
+    .right {
+      overflow: hidden;
+      background-color: azure;
+    }
+
+    .left p {
+      width:200px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：这种情况与两列定宽查不多。
+    用法：先将左框设置为float:left、margin-right，再设置右框overflow: hidden，最后设置左框中的内容width。
+    优点：简单
+    缺点：ie6下兼容性存在一定问题
+   -->
+  <div class="parent">
+    <div class="left">
+      <p>
+        left
+      </p>
+    </div>
+    <div class="right">
+      <p>
+        right
+      </p>
+      <p>
+        right
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

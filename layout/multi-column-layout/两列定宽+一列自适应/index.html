@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>两列定宽+一列自适应</title>
+  <style>
+    .left,
+    .center {
+      float: left;
+      width:100px;
+      margin-right:20px;
+      background-color: antiquewhite;
+    }
+    .center{
+      background-color: aquamarine;
+    }
+    .right {
+      overflow: hidden;
+      background-color: beige;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：这种情况与定宽+自适应查不多。
+    用法：先将左、中框设置为float:left、width、margin-right，再设置右框overflow:hidden。
+    优点：
+    缺点：
+   -->
+  <div class="parent">
+    <div class="left">
+      <p>
+        left
+      </p>
+    </div>
+    <div class="center">
+      <p>
+        center
+      </p>
+    </div>
+    <div class="right">
+      <p>
+        right
+      </p>
+      <p>
+        right
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

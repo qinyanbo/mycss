@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>table</title>
+  <style>
+    .parent {
+      display: table;
+      width:100%;
+    }
+    .left,
+    .right {
+      display: table-cell;
+      background-color: antiquewhite;
+    }
+    .left {
+      width:0.1%;
+      padding-right:20px;
+      background-color: aquamarine;
+    }
+    .left p {
+      width:200px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：通过将父框改变为表格，将左右框转换为类似于同一行的td以达到多列布局，设置父框宽度100%，给左框子元素一个固定宽度从而达到自适应。
+    用法：先将父框设置为display: table、width: 100%，再设置左、右框display: table-cell，最后设置左框width: 0.1%、padding-right以及左框中的内容width。
+    优点：
+    缺点：ie6 ie7不支持
+   -->
+  <div class="parent">
+    <div class="left">
+      <p>
+        left
+      </p>
+    </div>
+    <div class="right">
+      <p>
+        right
+      </p>
+      <p>
+        right
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

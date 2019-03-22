@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>float + margin</title>
+  <style>
+    .left {
+      float: left;
+      width:100px;
+      background-color: antiquewhite;
+    }
+
+    .right {
+      margin-left:120px;
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：通过将左框脱离文本流，加上右框向右移动一定的距离，以达到视觉上的多列布局。
+    用法：先将左框设置为float:left、margin-left，再设置右框margin-left。
+    优点：简单，易理解
+    缺点：兼容性存在一定问题，ie6下有3px的bug。right下的p清除浮动将产生bug
+   -->
+  <div class="parent">
+    <div class="left">
+      <p>left</p>
+    </div>
+    <div class="right">
+      <p>right</p>
+      <p>right</p>
+      <p>right</p>
+      <p>right</p>
+    </div>
+  </div>
+</body>
+
+</html>

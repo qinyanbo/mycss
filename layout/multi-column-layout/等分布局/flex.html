@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex</title>
+  <style>
+    .parent {
+      display: flex;
+    }
+    .column {
+      flex:1;
+      background-color: aliceblue;
+    }
+    .column+.column {
+      margin-left:20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：通过设置CSS3布局利器flex中的flex属性以达到等分布局。
+    用法：将父框设置为display: flex，再设置子框flex: 1，最后设置子框与子框的间距margin-left。
+    优点：代码量少，与块数无关
+    缺点：兼容性存在一定问题
+   -->
+  <div class="parent">
+    <div class="column">
+      <p>
+        1
+      </p>
+    </div>
+    <div class="column">
+      <p>
+        2
+      </p>
+    </div>
+    <div class="column">
+      <p>
+        3
+      </p>
+    </div>
+    <div class="column">
+      <p>
+        4
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

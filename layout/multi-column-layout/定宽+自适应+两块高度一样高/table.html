@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>table</title>
+  <style>
+    .parent {
+      display: table;
+      width:100%;
+      table-layout:fixed;
+    }
+    .left {
+      width:100px;
+      padding-right:20px;
+      background-color: aliceblue;
+    }
+    .right,
+    .left {
+      display: table-cell;
+    }
+    .right{
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：将父框转化为tabel，将子框转化为tabel-cell布局，以达到定宽+自适应+两块高度一样高。
+    用法：先将父框设置为display:table、width:100%、table-layout:fixed，再设置左右框为display:table-cell，最后设置左框width、padding-right。
+    优点：
+    缺点：
+   -->
+  <div class="parent">
+    <div class="left">
+      <p>
+        left
+      </p>
+    </div>
+    <div class="right">
+      <p>
+        right
+      </p>
+      <p>
+        right
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

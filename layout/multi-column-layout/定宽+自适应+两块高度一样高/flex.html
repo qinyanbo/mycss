@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex</title>
+  <style>
+    .parent {
+      display: flex;
+    }
+    .left {
+      width:100px;
+      margin-right:20px;
+      background-color: aliceblue;
+    }
+    .right {
+      flex:1;
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：通过设置CSS3布局利器flex中的flex属性以达到定宽+自适应+两块高度一样高。
+    用法：将父框设置为display: flex，再设置左框width、margin-right，最后设置右框flex:1。
+    优点：代码少，flex很强大
+    缺点：兼容性存在一定问题
+   -->
+  <div class="parent">
+    <div class="left">
+      <p>
+        left
+      </p>
+    </div>
+    <div class="right">
+      <p>
+        right
+      </p>
+      <p>
+        right
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

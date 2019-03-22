@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>float + overflow</title>
+  <style>
+    .left {
+      float: left;
+      width:100px;
+      margin-right:20px;
+      background-color: antiquewhite;
+    }
+    .right {
+      overflow: hidden;
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：通过将左边框脱离文本流，设置右边规定当内容溢出元素框时发生的事情以达到多列布局。
+    用法：先将左框设置为float:left、width、margin-left，再设置实际的右框overflow:hidden。
+    优点：简单
+    缺点：不支持ie6
+   -->
+  <div class="parent">
+    <div class="left">
+      <p>left</p>
+    </div>
+    <div class="right">
+      <p>right</p>
+      <p>right</p>
+      <p>right</p>
+      <p>right</p>
+    </div>
+  </div>
+</body>
+
+</html>

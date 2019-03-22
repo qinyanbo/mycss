@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>float</title>
+  <style>
+    p {
+      background: none!important;
+    }
+    .left,
+    .right {
+      background:#444;
+    }
+    .parent {
+      overflow: hidden;
+    }
+    .left,
+    .right {
+      padding-bottom:9999px;
+      margin-bottom: -9999px;
+    }
+    .left {
+      float: left;
+      width:100px;
+      margin-right:20px;
+      background-color: aliceblue;
+    }
+    .right {
+      overflow: hidden;
+      background-color: antiquewhite;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：通过过分加大左右子框的高度，辅助超出隐藏，以达到视觉上的等高。
+    用法：将父框设置overflow: hidden，再设置左右子框padding-bottom: 9999px、margin-bottom: -9999px，最后设置左框float: left、width、margin-right，右框overflow: hidden。
+    优点：兼容性好
+    缺点：伪等高，不是真正意义上的等高
+   -->
+  <div class="parent">
+    <div class="left">
+      <p>
+        left
+      </p>
+    </div>
+    <div class="right">
+      <p>
+        right
+      </p>
+      <p>
+        right
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

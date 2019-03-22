@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>两列不定宽+一列自适应</title>
+  <style>
+    .left,
+    .center {
+      float: left;
+      margin-right:20px;
+      background-color: aliceblue;
+    }
+    .center{
+      background-color: antiquewhite;
+    }
+    .right {
+      overflow: hidden;
+      background-color: aquamarine;
+    }
+    .left p,
+    .center p {
+      width:100px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：这个情况与一列不定宽+一列自适应差不多。
+    用法：先将左、中框设置为float:left、margin-right，再设置右框overflow:hidden，最后给左中框中的内容设置width。
+   -->
+  <div class="parent">
+    <div class="left">
+      <p>
+        left
+      </p>
+    </div>
+    <div class="center">
+      <p>
+        center
+      </p>
+    </div>
+    <div class="right">
+      <p>
+        right
+      </p>
+      <p>
+        right
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

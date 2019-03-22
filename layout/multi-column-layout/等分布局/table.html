@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>table</title>
+  <style>
+    .parent-fix {
+      margin-left: -20px;
+      /* l+g */
+    }
+
+    .parent {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    .column {
+      display: table-cell;
+      padding-left: 20px;
+      /* w+g */
+      background-color: aliceblue;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：通过增加一个父框的修正框，增大其宽度，并将父框转换为table，将子框转换为tabel-cell进行布局。
+    用法：先将父框的修正框设置为margin-left: -*px，再设置父框display: table、width:100%、table-layout: fixed，设置子框display: table-cell、padding-left。
+    优点：结构和块数无关联
+    缺点：增加了一层
+   -->
+  <div class="parent-fix">
+    <div class="parent">
+      <div class="column">
+        <p>
+          1
+        </p>
+      </div>
+      <div class="column">
+        <p>
+          2
+        </p>
+      </div>
+      <div class="column">
+        <p>
+          3
+        </p>
+      </div>
+      <div class="column">
+        <p>
+          4
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

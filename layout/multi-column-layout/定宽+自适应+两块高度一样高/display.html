@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>display</title>
+  <style>
+    .parent {
+      width:100%;
+      display: -webkit-box;
+    }
+    .left {
+      width:100px;
+      margin-right:20px;
+      background-color: aliceblue;
+    }
+    .right {
+      -webkit-box-flex:1;
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    原理：通过设置display中的CSS3的-webkit-box属性以达到定宽+自适应+两块高度一样高。
+    用法：将父框设置为display: -webkit-box、width: 100%，再设置左框width、margin-right，最后设置右框-webkit-box-flex: 1。
+    优点：
+    缺点：兼容性存在较大的问题
+   -->
+  <div class="parent">
+    <div class="left">
+      left
+    </div>
+    <div class="right">
+      <p>right</p>
+      <p>right</p>
+    </div>
+  </div>
+</body>
+
+</html>
