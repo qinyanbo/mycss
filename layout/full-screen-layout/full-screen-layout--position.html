@@ -14,11 +14,9 @@
       height:100%;
       overflow: hidden;
     }
-
     body {
       color: white;
     }
-
     .top {
       position: absolute;
       top:0;
@@ -27,7 +25,6 @@
       height:100px;
       background: rgb(34, 110, 136);
     }
-
     .left {
       position: absolute;
       left:0;
@@ -36,7 +33,6 @@
       width:200px;
       background: rgb(226, 100, 27);
     }
-
     .right {
       position: absolute;
       left:200px;
@@ -46,11 +42,9 @@
       background: pink;
       overflow:auto;
     }
-
     .right .inner {
       min-height:1000px;
     }
-
     .bottom {
       position: absolute;
       left:0;
@@ -63,6 +57,12 @@
 </head>
 
 <body>
+  <!-- 
+    原理：将上下部分固定，中间部分使用定宽+自适应+两块高度一样高。
+    用法：
+    优点：兼容性好，ie6下不支持
+    缺点：
+   -->
   <div class="parent">
     <div class="top">
       top

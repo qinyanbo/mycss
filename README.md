@@ -41,6 +41,10 @@ my notes when learning Css
         - flex
         - display
 - 全屏布局
-    - position
-    - flex
-    - grid
+    - 特点
+        - 滚动条不是全局滚动条，而是出现在内容区域里，往往是主内容区域
+        - 浏览器变大时，撑满窗口
+    - 方法
+        - position
+        - flex
+        - grid

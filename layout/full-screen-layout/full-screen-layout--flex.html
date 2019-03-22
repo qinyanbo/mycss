@@ -14,42 +14,34 @@
       height:100%;
       overflow: hidden;
     }
-
     body {
       color: white;
     }
-
     .parent {
       display: flex;
       flex-direction: column;
     }
-
     .top {
       height:100px;
       background: rgb(34, 110, 136);
     }
-
     .bottom {
       height:50px;
       background: #ccc;
     }
-
     .middle {
       flex:1;
       display: flex;
     }
-
     .left {
       width:200px;
       background: rgb(226, 100, 27);
     }
-
     .right {
       flex:1;
       overflow:auto;
       background: pink;
     }
-
     .right .inner {
       min-height:1000px;
     }
@@ -57,6 +49,12 @@
 </head>
 
 <body>
+  <!-- 
+    原理：通过灵活使用CSS3布局利器flex中的flex属性和flex-direction属性以达到全屏布局。
+    用法：
+    优点：
+    缺点：兼容性差，ie9及ie9以下不兼容
+   -->
   <div class="parent">
     <div class="top">
       top
